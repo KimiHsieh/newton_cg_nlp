@@ -7,15 +7,15 @@ from dataset import *
 
 
 if __name__ == "__main__":
-    # Load and Preprocess raw dataset
+    # Step1. Load and preprocess raw dataset
     dataset_name = "ted_hrlr_translate/pt_to_en"
     train_examples, val_examples = data_load(dataset_name)
     seq_tr_pt, seq_tr_en = data_preprocessing(train_examples)
     seq_val_pt, seq_val_en = data_preprocessing(val_examples)
 
-    # Tokenizer
-    # Load tokenizers if they exsit
-    # Else Build the Tokenizers for both Portuguese to English dataset
+    # Step2. Tokenizer
+    # Load tokenizers IF they exist
+    # Else build the Tokenizers for both Portuguese to English dataset.
     if os.path.exists("tokenizer_pt.pickle") and os.path.exists("tokenizer_en.pickle"):
         with open("tokenizer_pt.pickle", "rb") as handle:
             tokenizer_pt = pickle.load(handle)
@@ -39,9 +39,9 @@ if __name__ == "__main__":
         with open("tokenizer_en.pickle", "wb") as handle:
             pickle.dump(tokenizer_en, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-    # Word Embedding
-    # Skip this step if they already exsit
-    # Else Build the embedding_matrix for both Portuguese to English dataset
+    # Step3. Word Embedding
+    # Skip this step if they already exist
+    # Else build the embedding_matrix for both Portuguese to English dataset
     # The embedding_matrix is used as embedding layer in model.
     if os.path.exists("embedding_matrix_pt.npy") and os.path.exists(
         "embedding_matrix_en.npy"
@@ -70,7 +70,7 @@ if __name__ == "__main__":
         tokenizer_pt, tokenizer_en, seq_val_pt, seq_val_en
     )
 
-    # Make all indices sequence with the same length.
+    # Step4. Make all indices sequence with the same length.
     MAX_SIZE = 20
     print("Make all indices sequence with the same length.......")
     print("training:")
@@ -82,8 +82,8 @@ if __name__ == "__main__":
         idices_val_pt, idices_val_en, 20
     )
 
-    # Save indices seqences as numpy array for model's input data
-    # convert indices sequences into numpy and save
+    # Step5. Save indices seqences into numpy array as model's input data
+    # convert indices sequences into numpy array
     idices_tr_pt_np = np.array(idices_tr_pt_max)
     idices_tr_en_np = np.array(idices_tr_en_max)
     idices_val_pt_np = np.array(idices_val_pt_max)

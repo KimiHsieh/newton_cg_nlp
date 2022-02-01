@@ -18,7 +18,7 @@ print(tf.__version__)
 
 
 def data_load(dataset_name):
-    """This function downloads of TED talk transcripts
+    """This function downloads the TED talk transcripts dataset
     Please check dataset in https://www.tensorflow.org/datasets/catalog/ted_hrlr_translate
 
     Arguments:
@@ -120,7 +120,7 @@ def preprocess_sentence(s):
 
 
 def load_word_embedding(pretrained_word_embedding):
-    """Load pre-trained Word Embedding from fastText
+    """Load the pre-trained Word Embedding model from fastText.
     https://fasttext.cc/docs/en/crawl-vectors.html
     
     Args:
@@ -144,7 +144,7 @@ def load_word_embedding(pretrained_word_embedding):
 
 
 def build_word_embedding_matrix(embeddings_dict, tokenizer, size_of_vocabulary):
-    """Create a weight matrix for words as the embedding layer in model
+    """Create a weight matrix for words as the embedding layer in the model.
     Since pre-trained model can't cover all words in tokenizer, the function will show how many words are lost.
 
     Args:
@@ -183,7 +183,7 @@ def build_word_embedding_matrix(embeddings_dict, tokenizer, size_of_vocabulary):
 
 
 def text_to_indices(tokenizer_src, tokenizer_tar, seq_src, seq_tar):
-    """ Use tokenizer to map text sequence to interger indices
+    """ Use the tokenizer to map text sequence to interger indices.
     Args:
         tokenizer_src (keras tokenizer)
         tokenizer_tar (keras tokenizer)
@@ -204,7 +204,7 @@ def text_to_indices(tokenizer_src, tokenizer_tar, seq_src, seq_tar):
 
 
 def filter_and_padding(idices_src, idices_tar, max_length):
-    """ Make all input idices sequences with same length 
+    """ Make all indices sequences with the same length. 
 
     Args:
         idices_src (list(int))
