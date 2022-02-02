@@ -49,6 +49,7 @@ Essentially, it runs the process as follows:
 checkpoints
     └── samples35644_2layers_10heads_2dff
         ├── Adam_lrCustomSchedule
+        ├── Adam_lrCustomSchedule_40ep
         ├── Newton_CG_lr0.001_tau10.0
         ├── Newton_CG_lr0.01_tau10.0
         └── SGD_lr0.001
