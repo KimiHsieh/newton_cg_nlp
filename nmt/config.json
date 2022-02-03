@@ -1,0 +1,36 @@
+{
+    "DATA_PATH":{
+        "data_folder":"../preprocessing",
+        "tokenizer_enc": "tokenizer_pt.pickle",
+        "tokenizer_dec": "tokenizer_en.pickle",
+        "embedding_matrix_enc": "embedding_matrix_pt.npy",
+        "embedding_matrix_dec": "embedding_matrix_en.npy",
+        "indices_tr_enc": "idices_tr_pt_np.npy",
+        "indices_tr_dec": "idices_tr_en_np.npy",
+        "indices_val_enc": "idices_val_pt_np.npy",
+        "indices_val_dec": "idices_val_en_np.npy"
+    },
+    "OPTIMIZERS": {
+        "batch_size":64,
+        "epochs": 20,
+        "Adam": [
+            {"learning_rate": 0.0001, "beta_1": 0.9, "beta_2": 0.98, "epsilon": 1e-9}
+        ],
+        "SGD": [
+            {"learning_rate": 0.001, "momentum": 0.9}
+        ],
+        "Newton_CG": [
+            {"learning_rate": 0.001, "tau": 1.0E+1}
+        ]
+    },
+    "MODEL_HYPERPARAMETERS": [
+        {"num_layers": 2, "num_heads": 10, "dropout_rate": 0.1, "dff": 256, "pe_inp": 1000, "pe_tar": 1000},
+        {"num_layers": 1, "num_heads": 15, "dropout_rate": 0.1, "dff": 256, "pe_inp": 1000, "pe_tar": 1000}
+    ],
+    "PRE_TRAINED": {
+        "use_pretrained": true,
+        "samples35644_1layers_15heads_2dff": {
+            "pre_trained_checkpoint_dir": "checkpoints/samples35644_1layers_15heads_2dff/Adam_CustomSchedule_1ep"
+        }
+    }
+}

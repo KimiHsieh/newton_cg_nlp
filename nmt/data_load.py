@@ -12,22 +12,18 @@ class DataLoad:
         Args:
             cfg (.json): config.json
         """
-        self.tokenizer_enc = os.path.join(cfg["preprocessing"], cfg["tokenizer_enc"])
-        self.tokenizer_dec = os.path.join(cfg["preprocessing"], cfg["tokenizer_dec"])
+        self.tokenizer_enc = os.path.join(cfg["data_folder"], cfg["tokenizer_enc"])
+        self.tokenizer_dec = os.path.join(cfg["data_folder"], cfg["tokenizer_dec"])
         self.embedding_matrix_enc = os.path.join(
-            cfg["preprocessing"], cfg["embedding_matrix_enc"]
+            cfg["data_folder"], cfg["embedding_matrix_enc"]
         )
         self.embedding_matrix_dec = os.path.join(
-            cfg["preprocessing"], cfg["embedding_matrix_dec"]
+            cfg["data_folder"], cfg["embedding_matrix_enc"]
         )
-        self.indices_tr_enc = os.path.join(cfg["preprocessing"], cfg["indices_tr_enc"])
-        self.indices_tr_dec = os.path.join(cfg["preprocessing"], cfg["indices_tr_dec"])
-        self.indices_val_enc = os.path.join(
-            cfg["preprocessing"], cfg["indices_val_enc"]
-        )
-        self.indices_val_dec = os.path.join(
-            cfg["preprocessing"], cfg["indices_val_dec"]
-        )
+        self.indices_tr_enc = os.path.join(cfg["data_folder"], cfg["indices_tr_enc"])
+        self.indices_tr_dec = os.path.join(cfg["data_folder"], cfg["indices_tr_dec"])
+        self.indices_val_enc = os.path.join(cfg["data_folder"], cfg["indices_val_enc"])
+        self.indices_val_dec = os.path.join(cfg["data_folder"], cfg["indices_val_dec"])
 
     def load_tokenizer(self):
         """
