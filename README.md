@@ -29,6 +29,11 @@ Adam and Stochastic gradient descent(SGD). In our previous research, the Newton-
 Besides, Newton-CG has shown **higher accuracy** than other first-order optimizers in senti- ment analysis on the Attention model.
 In this NMT task, Newton-CG with pre-training **outperforms** others in BLEU scores and **overcomes the overfitting**.
 
+<p align="center">
+  <img src="images/BLEU_best_opts_tr.png" alt="bleu_tr" width="600"/>
+  <img src="images/BLEU_best_opts_val.png" alt="bleu_val" width="600"/>
+</p>
+
 ## Citation
 
 Here is my [master thesis](https://mediatum.ub.tum.de/1633374). Feel free to take a look and cite it :smiley:
