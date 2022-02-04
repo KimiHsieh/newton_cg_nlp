@@ -1,4 +1,4 @@
-`main.py` trains the NMT tasks in Transofromer with different model hyperparameters
+`main.py` trains the NMT tasks in Transofromer with different models
 and different optimizers by using nested `for loop` based on `config.json`.
 
 - Within outer loop, different models are trained.
@@ -56,12 +56,11 @@ checkpoints
 ```
 
 In `nmt.sh`, we can set the epochs and batch size of Adam pre-trained model.
+1st argument is the number of epochs. 2nd is the batch size.
 
 ```sh
 python adam_schedule.py 1 64
 ```
-
-1st argument is the number of epochs. 2nd is the batch size.
 
 Turning off the pre-trained model, the model will be trained from scratch.
 

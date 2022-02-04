@@ -28,3 +28,11 @@ After preprocessing, this directory should contain:
   4. English validation data `idices_val_pt_np.npy`
 
 The pre-trained Portuguese and English word embedding models, `cc.pt.300.vec` and `cc.en.300.vec` must be downloaded from [fastText](https://fasttext.cc/docs/en/crawl-vectors.html) into this directory first.
+
+### How to use
+
+Run the `preprocessing.py`.
+
+```sh
+$ python preprocessing.py
+```

@@ -2,6 +2,8 @@
 
 `prediction.py` can only translate one model with one optimizer at a time.
 
+Note: Translation may take 2 to 3 hours for 35,644 training sentences in Google Colab free.
+
 ### How to use
 
 1. Set the model hyperparameters in `model_config.json`
