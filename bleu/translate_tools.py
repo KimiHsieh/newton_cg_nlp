@@ -104,9 +104,13 @@ def load_pred(data_save_path):
     return pred_tr, ref_tr, pred_val, ref_val
 
 
-def show_results(pred_detoken, ref_detoken, num, type_="Training data"):
+def show_results(pred_detoken, ref_detoken, num, type_="tr"):
+    if type_ == "tr":
+        result_type = "Training"
+    else:
+        result_type = "Validation"
     for pred, ref in zip(pred_detoken[:num], ref_detoken[:num]):
-        print(type_)
+        print(result_type)
         print(f'{f"pred":<10}{f"{pred[0]}":<10}')
         print(f'{f"ref":<10}{f"{ref[0]}":<10}')
         print("-" * 50)

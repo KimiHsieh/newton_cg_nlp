@@ -131,8 +131,8 @@ if __name__ == "__main__":
     tar_detokenizer = dict(map(reversed, tokenizer_dec.word_index.items()))
     pred_text_tr, ref_text_tr = detokenize(pred_tr, ref_tr, tar_detokenizer)
     pred_text_val, ref_text_val = detokenize(pred_val, ref_val, tar_detokenizer)
-    show_results(pred_text_tr, ref_text_tr, 3, type_="Training data")
-    show_results(pred_text_val, ref_text_val, 3, type_="Validation data")
+    show_results(pred_text_tr, ref_text_tr, 3, type_="tr")
+    show_results(pred_text_val, ref_text_val, 3, type_="val")
     save_results(data_save_path, pred_text_tr, ref_text_tr, type_="tr")
     save_results(data_save_path, pred_text_val, ref_text_val, type_="val")
 
