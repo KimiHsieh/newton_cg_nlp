@@ -1,11 +1,11 @@
 <p align="center">
-    <!-- <a href="https://circleci.com/gh/huggingface/transformers"> -->
+    <a href="https://www.tensorflow.org">
         <img alt="TensorFlow Logo" src="https://www.tensorflow.org/images/tf_logo_horizontal.png">
     </a>
-    <!-- <a href="https://github.com/huggingface/transformers/blob/master/LICENSE"> -->
+    <a href="https://www.python.org/downloads/release/python-360/">
         <img alt="Python" src="https://img.shields.io/badge/python-3.6%7C3.7%7C3.8-blue">
     </a>
-    <!-- <a href="https://github.com/huggingface/transformers/blob/master/LICENSE"> -->
+    <a href="https://www.tensorflow.org/install/pip">
         <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-1.15-blue">
     </a>
 
